@@ -33,7 +33,7 @@
         }
 
         .project-background {
-            position: relative;
+            position: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -46,7 +46,11 @@
         }
 
         .project-cover {
-            position: relative;
+            top: 0;
+            bottom: 0;
+            position: fixed;
+            overflow-y: scroll;
+            overflow-x: hidden;
             width: 100%;
         }
 
@@ -370,7 +374,7 @@
         <div class="project-cover">
             <h1>Bottle Detection in the Wild Using Low-Altitude Unmanned Aerial Vehicles</h1>
             <h2 class="authors">
-                <a target="_blank" href="../index.html">Jinwang Wang</a>, Wei Guo, Ting Pan, Huai Yu, Lin Duan, Wen Yang</h2>
+                Jinwang Wang, Wei Guo, Ting Pan, Huai Yu, Lin Duan, Wen Yang</h2>
             <div class='text-animation'>
                 <ul>
                     <li>UAV-BD is a dataset for low altitude UAV bottle detection.</li>
