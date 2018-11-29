@@ -46,8 +46,6 @@
         }
 
         .project-cover {
-            top: 0;
-            bottom: 0;
             position: fixed;
             overflow-y: scroll;
             overflow-x: hidden;
@@ -323,6 +321,10 @@
             .btn {
                 padding: 0.75rem 1rem;
             }
+            .project-cover {
+                position: fixed;
+                width: 100%;
+            }
         }
 
         /* tablet */
@@ -337,6 +339,10 @@
             .btn {
                 padding: 0.6rem 0.9rem;
                 font-size: 0.9rem;
+            }
+            .project-cover {
+                position: fixed;
+                width: 100%;
             }
         }
 
@@ -355,13 +361,21 @@
                 font-size: 1rem;
 
                 margin-top: 1rem;
-                margin-left: 30%;
-                margin-right: 30%;
+                margin-left: 20%;
+                margin-right: 20%;
             }
             .btn+.btn {
                 margin-top: 1rem;
-                margin-left: 30%;
-                margin-right: 30%;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .project-cover {
+                top: 0;
+                bottom: 0;
+                position: fixed;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                width: 100%;
             }
         }
     </style>
@@ -373,8 +387,7 @@
     <div class="project-background">
         <div class="project-cover">
             <h1>Toward Autonomous Rotation-Aware Unmanned Aerial Grasping</h1>
-            <h2 class="authors">Shijie Lin*,
-                <a target="_blank" href="../index.html">Jinwang Wang*</a>, Wen Yang, Guisong Xia</h2>
+            <h2 class="authors">Shijie Lin*, Jinwang Wang*, Wen Yang, Guisong Xia</h2>
             <div class='text-animation'>
                 <ul>
                     <li>Designed a vision-based autonomous UAM with a 3DoF robotic arm for rotational grasping</li>
@@ -386,8 +399,6 @@
             <h2 class="text-static">Designed a vision-based autonomous UAM with a 3DoF robotic arm for rotational grasping</h2>
             <!-- <a target="_blank" href="https://github.com/ZhouYanzhao/UAM" class="btn">Source code and Demo</a> -->
             <a target="_blank" href="./UAM_Paper.pdf" class="btn">Paper</a>
-            <!-- <a target="_blank" href="Supplementary.pdf" class="btn">Supplementary materials</a> -->
-            <!-- <a target="_blank" href="Poster.pdf" class="btn">Poster</a> -->
             <a target="_blank" href="https://www.youtube.com/watch?v=v_hGzN8VIAU&feature=youtu.be" class="btn">Demo</a>
         </div>
     </div>
@@ -417,4 +428,5 @@
         }
     </script>
 </body>
+
 </html>

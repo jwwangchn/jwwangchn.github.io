@@ -46,11 +46,7 @@
         }
 
         .project-cover {
-            top: 0;
-            bottom: 0;
             position: fixed;
-            overflow-y: scroll;
-            overflow-x: hidden;
             width: 100%;
         }
 
@@ -320,6 +316,10 @@
         /* screen */
 
         @media screen and (min-width: 64em) {
+            .project-cover {
+                position: fixed;
+                width: 100%;
+            }
             .btn {
                 padding: 0.75rem 1rem;
             }
@@ -333,6 +333,10 @@
             }
             h2 {
                 font-size: 1.2rem;
+            }
+            .project-cover {
+                position: fixed;
+                width: 100%;
             }
             .btn {
                 padding: 0.6rem 0.9rem;
@@ -355,13 +359,21 @@
                 font-size: 1rem;
 
                 margin-top: 1rem;
-                margin-left: 30%;
-                margin-right: 30%;
+                margin-left: 20%;
+                margin-right: 20%;
             }
             .btn+.btn {
                 margin-top: 1rem;
-                margin-left: 30%;
-                margin-right: 30%;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .project-cover {
+                top: 0;
+                bottom: 0;
+                position: fixed;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                width: 100%;
             }
         }
     </style>
@@ -415,4 +427,5 @@
         }
     </script>
 </body>
+
 </html>
