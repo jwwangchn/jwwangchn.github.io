@@ -51,7 +51,7 @@
         }
 
         h1 {
-            font-size: 4.25rem;
+            font-size: 3.0rem;
             font-weight: bold;
             margin: 0;
         }
@@ -305,12 +305,17 @@
         /* big screen */
 
         @media screen and (min-width: 1024px) {
+            .project-cover {
+                position: fixed;
+                width: 100%;
+            }
             .text-animation {
                 display: inherit;
             }
             .text-static {
                 display: none;
             }
+
         }
 
         /* screen */
@@ -328,16 +333,17 @@
         /* tablet */
 
         @media screen and (min-width: 42em) and (max-width: 64em) {
+            .project-cover {
+                position: fixed;
+                width: 100%;
+            }
             h1 {
                 font-size: 2.8rem;
             }
             h2 {
                 font-size: 1.2rem;
             }
-            .project-cover {
-                position: fixed;
-                width: 100%;
-            }
+            
             .btn {
                 padding: 0.6rem 0.9rem;
                 font-size: 0.9rem;
@@ -347,6 +353,14 @@
         /* phone */
 
         @media screen and (max-width: 42em) {
+            .project-cover {
+                top: 0;
+                bottom: 0;
+                position: fixed;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                width: 100%;
+            }
             h1 {
                 font-size: 2.4rem;
             }
@@ -367,14 +381,7 @@
                 margin-left: 20%;
                 margin-right: 20%;
             }
-            .project-cover {
-                top: 0;
-                bottom: 0;
-                position: fixed;
-                overflow-y: scroll;
-                overflow-x: hidden;
-                width: 100%;
-            }
+
         }
     </style>
     <!-- Web font -->
