@@ -191,7 +191,7 @@ a.invalid-link {
 }
 
 .section .content .more-link .fa {
-    margin-left: 5px;
+    /* margin-left: 5px; */
     font-size: 14px
 }
 
