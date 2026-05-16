@@ -89,7 +89,7 @@ pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: googlef4fce2200c227479 # your google-site-verification ID (Google Search Console)
+google_site_verification: "" # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
@@ -178,33 +178,12 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages"]
 exclude:
-  - bin/
-  - docs/
-  - script/
-  - scripts/
-  - ORN/
-  - Publication/
-  - AGENTS.md
-  - ANALYTICS.md
-  - AntiUAVSystem_10_21.pdf
-  - CLAUDE.md
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
-  - Dockerfile
-  - docker-compose.yml
-  - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
-  - lighthouse_results/
-  - jekyll-theme-cayman.gemspec
-  - main.min.js
-  - package.json
-  - package-lock.json
+  - vendor
   - _pages/about_einstein.md
   - _pages/blog.md
   - _pages/books.md
@@ -216,21 +195,6 @@ exclude:
   - _pages/publications.md
   - _pages/repositories.md
   - _pages/teaching.md
-  - _books/
-  - _posts/
-  - _projects/
-  - _teachings/
-  - purgecss.config.js
-  - QUICKSTART.md
-  - README.md
-  - readme_preview/
-  - requirements.txt
-  - vendor
-  - images/
-  - SEO.md
-  - styles.min.css
-  - thumbnail.png
-  - TROUBLESHOOTING.md
 keep_files:
   - CNAME
   - .nojekyll
@@ -527,7 +491,7 @@ third_party_libraries:
       js: "sha256-MgH13bFTTNqsnuEoqNPBLDaqxjGH+lCpqrukmXc8Ppg="
       js_map: "sha256-YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M="
     local:
-      images: "images/"
+      images: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/images/"
     url:
       css: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.min.css"
       images: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/images/"
