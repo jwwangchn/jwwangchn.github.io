@@ -32,4 +32,4 @@ honors:
   - National Encouragement Scholarship (Top 1%) — 2013, 2015
 ---
 
-I am a Researcher at Alibaba DAMO Academy. I received my Ph.D. from Wuhan University advised by Prof. Wen Yang and Prof. Gui-Song Xia. My research interests include VLM, AIGC, LLM, Computer Vision. Previously, I worked at Huawei on vision, graphics, content safety, and video generation systems, and interned at SenseTime on remote sensing object detection and building footprint extraction.
+I am a Researcher at Alibaba DAMO Academy. I received my Ph.D. from Wuhan University advised by Prof. Wen Yang and Prof. Gui-Song Xia. My research interests include VLM, AIGC, LLM, Computer Vision. Previously, I worked at Huawei on computational graphics and video generation foundation models, and interned at SenseTime on object detection.
