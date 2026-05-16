@@ -1,17 +1,12 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Researcher, Alibaba DAMO Academy
 
-profile:
-  align: right
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Alibaba DAMO Academy</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+publications: true
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: false # includes a list of news items
@@ -22,8 +17,20 @@ latest_posts:
   enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
+
+honors:
+  - Yu Gang & Song Xiao Scholarship (Top 1%) — 2020
+  - National Graduate Scholarship (Top 1%) — 2017, 2018
+  - National First Prize (TOP5) & Best Paper Award, Graduate Electronic Design Competition — 2018
+  - 6th Place & Finalist, ICRA & DJI RoboMaster AI/Robotics Challenge — 2017, 2018
+  - National Second Prize, Graduate Electronic Design Competition — 2017
+  - Chun-Cheng Scholar (Top 1%) — 2016
+  - Provincial Grand Prize, National Undergraduate Electronics Design Contest — 2015
+  - National Third Prize, Challenge Cup — 2015
+  - National Second Prize, National Mathematical Modeling Competition — 2014
+  - National Scholarship (Top 1%) — 2014
+  - National Encouragement Scholarship (Top 1%) — 2013, 2015
 ---
 
-I am a Researcher at [Alibaba DAMO Academy](https://damo.alibaba.com/). My research interests include computer vision, remote sensing image analysis, and deep learning, with a particular focus on object detection in aerial images.
+I am a Researcher at [Alibaba DAMO Academy](https://damo.alibaba.com/). I received my Ph.D. from Wuhan University advised by Prof. Wen Yang and Prof. Gui-Song Xia. My research interests include VLM, AIGC, LLM, Computer Vision.
 
-My work has been published in top-tier venues and journals including IEEE TPAMI, ISPRS Journal of Photogrammetry and Remote Sensing, IEEE TGRS, CVPR, ICCV, and ECCV.
