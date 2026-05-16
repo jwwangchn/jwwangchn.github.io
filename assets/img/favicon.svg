@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700">
-  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path
+    fill="#facc15"
+    stroke="#ca8a04"
+    stroke-linejoin="round"
+    stroke-width="3"
+    d="M32 5.5 39.9 22l18.1 2.6-13.1 12.8 3.1 18-16-8.4-16 8.4 3.1-18L6 24.6 24.1 22 32 5.5z"
+  />
 </svg>
