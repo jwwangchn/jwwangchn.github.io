@@ -21,7 +21,6 @@ latest_posts:
 featured_projects:
   - title: Arxiv Daily Paper
     url: https://jinwangwang.top/Arxiv-Daily-Paper/
-    image: /assets/img/arxiv-daily-paper.png
     description: Daily arXiv paper tracking and analysis dashboard for computer vision, AI, language, and machine learning papers.
 
 honors:
