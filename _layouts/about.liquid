@@ -53,6 +53,11 @@ layout: default
       <div class="featured-projects">
         {% for project in page.featured_projects %}
           <a class="featured-project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+            {% if project.image %}
+              <div class="featured-project-image">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+              </div>
+            {% endif %}
             <span class="featured-project-title">{{ project.title }}</span>
             <span class="featured-project-description">{{ project.description }}</span>
             <span class="featured-project-link">Open project</span>

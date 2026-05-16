@@ -181,7 +181,7 @@ body.fixed-top-nav {
 
 .featured-project {
   display: block;
-  padding: 1rem 1.1rem;
+  padding: 0;
   border: 1px solid var(--jw-line);
   border-radius: 8px;
   background: var(--jw-surface);
@@ -192,6 +192,24 @@ body.fixed-top-nav {
     border-color 0.2s,
     transform 0.2s,
     box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.featured-project-image {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.3s;
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
 }
 
 .featured-project:hover {
@@ -209,6 +227,8 @@ body.fixed-top-nav {
 }
 
 .featured-project-title {
+  display: block;
+  padding: 1rem 1.1rem 0;
   color: var(--jw-ink);
   font-size: 1.05rem;
   font-weight: 700;
@@ -216,14 +236,17 @@ body.fixed-top-nav {
 }
 
 .featured-project-description {
+  display: block;
   max-width: 760px;
-  margin-top: 0.25rem;
+  padding: 0.25rem 1.1rem 0;
   font-size: 0.94rem;
   line-height: 1.65;
 }
 
 .featured-project-link {
+  display: block;
   margin-top: 0.65rem;
+  padding: 0 1.1rem 1rem;
   color: var(--jw-primary);
   font-size: 0.82rem;
   font-weight: 700;
