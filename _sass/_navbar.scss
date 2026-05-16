@@ -2,13 +2,15 @@
  * Navigation bar and header customization
  ******************************************************************************/
 
-@use "variables" as v;
-
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+
+  > .container {
+    max-width: 960px;
+  }
 }
 
 .navbar .dropdown-menu,
@@ -57,6 +59,14 @@
 
   .navbar-brand {
     color: var(--global-text-color);
+  }
+
+  .navbar-brand.title {
+    flex-shrink: 0;
+    margin-right: 2rem;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -112,6 +122,13 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar.navbar-light .navbar-brand.title {
+    font-size: 1.15rem;
+    margin-right: 1rem;
   }
 }
 
