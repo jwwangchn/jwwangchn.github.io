@@ -6,7 +6,6 @@ subtitle: Researcher, Alibaba DAMO Academy
 
 profile:
   align: right
-  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Alibaba DAMO Academy</p>
@@ -28,5 +27,3 @@ latest_posts:
 I am a Researcher at [Alibaba DAMO Academy](https://damo.alibaba.com/). My research interests include computer vision, remote sensing image analysis, and deep learning, with a particular focus on object detection in aerial images.
 
 My work has been published in top-tier venues and journals including IEEE TPAMI, ISPRS Journal of Photogrammetry and Remote Sensing, IEEE TGRS, CVPR, ICCV, and ECCV.
-
-![profile photo](assets/img/prof_pic.jpg){:width="100%"}
