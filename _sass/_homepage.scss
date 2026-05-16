@@ -3,8 +3,8 @@
  ******************************************************************************/
 
 :root {
-  --jw-primary: #2c3e50;
-  --jw-primary-light: #4a6278;
+  --jw-primary: #222;
+  --jw-primary-light: #555;
   --jw-ink: #222;
   --jw-muted: #555;
   --jw-muted-light: #888;
@@ -16,8 +16,8 @@
 }
 
 html[data-theme="dark"] {
-  --jw-primary: #5a7d9a;
-  --jw-primary-light: #7ba3c0;
+  --jw-primary: #edf3f5;
+  --jw-primary-light: #c8d0d4;
   --jw-ink: #edf3f5;
   --jw-muted: #aab7bd;
   --jw-muted-light: #777;
@@ -57,7 +57,7 @@ body.fixed-top-nav {
 
 .post-header {
   position: relative;
-  padding: 40px 0 24px;
+  padding: 20px 0 24px;
   background: var(--jw-bg);
 }
 
@@ -299,7 +299,7 @@ body.fixed-top-nav {
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
   color: var(--jw-primary) !important;
-  background: rgba(102, 8, 116, 0.05);
+  background: rgba(128, 128, 128, 0.12);
 }
 
 .navbar.navbar-light .navbar-nav .nav-item.active .nav-link {
@@ -309,11 +309,15 @@ body.fixed-top-nav {
 
 /* ===== FOOTER ===== */
 
-footer {
+footer:not(.fixed-bottom) {
   background: var(--jw-soft);
   border-top: 1px solid var(--jw-line);
   padding: 40px 30px 24px;
   text-align: center;
+}
+
+footer.fixed-bottom {
+  padding: 0;
 }
 
 /* ===== RESPONSIVE ===== */
