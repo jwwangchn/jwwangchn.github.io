@@ -48,6 +48,19 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    {% if page.featured_projects %}
+      <h2 id="projects">Projects</h2>
+      <div class="featured-projects">
+        {% for project in page.featured_projects %}
+          <a class="featured-project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+            <span class="featured-project-title">{{ project.title }}</span>
+            <span class="featured-project-description">{{ project.description }}</span>
+            <span class="featured-project-link">Open project</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>

@@ -53,11 +53,15 @@ body.fixed-top-nav {
   max-width: 960px;
 }
 
+.container[role="main"].mt-5 {
+  margin-top: 1.5rem !important;
+}
+
 /* ===== HERO / HEADER ===== */
 
 .post-header {
   position: relative;
-  padding: 20px 0 24px;
+  padding: 10px 0 24px;
   background: var(--jw-bg);
 }
 
@@ -165,6 +169,65 @@ body.fixed-top-nav {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.3px;
+}
+
+/* ===== FEATURED PROJECTS ===== */
+
+.featured-projects {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0 0 2rem;
+}
+
+.featured-project {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--jw-line);
+  border-radius: 8px;
+  background: var(--jw-surface);
+  color: var(--jw-muted);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.featured-project:hover {
+  border-color: var(--jw-primary);
+  color: var(--jw-muted);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.featured-project-title,
+.featured-project-description,
+.featured-project-link {
+  display: block;
+}
+
+.featured-project-title {
+  color: var(--jw-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.featured-project-description {
+  max-width: 760px;
+  margin-top: 0.25rem;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.featured-project-link {
+  margin-top: 0.65rem;
+  color: var(--jw-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* ===== HONORS LIST ===== */
@@ -289,9 +352,9 @@ body.fixed-top-nav {
 }
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-  font-weight: 500;
+  font-weight: 600 !important;
   font-size: 0.88rem;
-  color: var(--jw-muted) !important;
+  color: var(--jw-ink) !important;
   padding: 6px 14px;
   border-radius: 6px;
   transition: all 0.2s;
@@ -303,8 +366,8 @@ body.fixed-top-nav {
 }
 
 .navbar.navbar-light .navbar-nav .nav-item.active .nav-link {
-  color: var(--jw-primary) !important;
-  font-weight: 600;
+  color: var(--jw-ink) !important;
+  font-weight: 600 !important;
 }
 
 /* ===== FOOTER ===== */
@@ -312,8 +375,12 @@ body.fixed-top-nav {
 footer:not(.fixed-bottom) {
   background: var(--jw-soft);
   border-top: 1px solid var(--jw-line);
-  padding: 40px 30px 24px;
+  padding: 12px 30px 8px;
   text-align: center;
+}
+
+footer.sticky-bottom {
+  margin-top: 1.5rem !important;
 }
 
 footer.fixed-bottom {
@@ -324,7 +391,7 @@ footer.fixed-bottom {
 
 @media (max-width: 768px) {
   .post-header {
-    padding-top: 70px;
+    padding-top: 40px;
   }
 
   .post-title {
