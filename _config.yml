@@ -60,6 +60,8 @@ socials_in_search: true
 posts_in_search: true
 bib_search: false
 navbar_sections:
+  - title: Projects
+    url: /#projects
   - title: Honors
     url: /#honors
   - title: Publications

@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Researcher, Alibaba DAMO Academy
+subtitle:
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 publications: true
@@ -18,6 +18,11 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
+featured_projects:
+  - title: Arxiv Daily Paper
+    url: https://jinwangwang.top/Arxiv-Daily-Paper/
+    description: Daily arXiv paper tracking and analysis dashboard for computer vision, AI, language, and machine learning papers.
+
 honors:
   - Yu Gang & Song Xiao Scholarship (Top 1%) — 2020
   - National Graduate Scholarship (Top 1%) — 2017, 2018
@@ -32,4 +37,8 @@ honors:
   - National Encouragement Scholarship (Top 1%) — 2013, 2015
 ---
 
-I am a Researcher at Alibaba DAMO Academy. I received my Ph.D. from Wuhan University advised by Prof. Wen Yang and Prof. Gui-Song Xia. My research interests include VLM, AIGC, LLM, Computer Vision. Previously, I worked at Huawei on computational graphics and video generation foundation models, and interned at SenseTime on object detection.
+Researcher at Alibaba DAMO Academy, Ph.D. from Wuhan University, advised by Prof. Wen Yang and Prof. Gui-Song Xia.
+
+My research focuses on Deep Learning, Computer Vision, Generative AI, Medical AI, in particular video generation models and medical vision-larguage models.
+
+Previously, I worked at Huawei on computer graphics and video generation models, and interned at SenseTime on object detection.
