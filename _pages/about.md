@@ -25,6 +25,7 @@ featured_projects:
     description: Daily arXiv paper tracking and analysis dashboard for computer vision, AI, language, and machine learning papers.
 
 honors:
+  - Academic Innovation Second Prize Scholarship (Top 3%) — 2022
   - Yu Gang & Song Xiao Scholarship (Top 1%) — 2020
   - National Graduate Scholarship (Top 1%) — 2017, 2018
   - National First Prize (TOP5) & Best Paper Award, Graduate Electronic Design Competition — 2018

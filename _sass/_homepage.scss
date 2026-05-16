@@ -2,6 +2,22 @@
  * Personal homepage styles - inspired by yizenghan.github.io
  ******************************************************************************/
 
+/* Prevent FOUC: page starts hidden, fades in when CSS is loaded */
+body.page-ready-fade {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.page-ready-fade.loaded {
+  opacity: 1;
+}
+
+/* Also ensure navbar text is always visible even during load */
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: var(--jw-ink) !important;
+  font-weight: 600 !important;
+}
+
 :root {
   --jw-primary: #222;
   --jw-primary-light: #555;
@@ -198,10 +214,13 @@ body.fixed-top-nav {
 .featured-project-image {
   width: 100%;
   overflow: hidden;
+  background: var(--jw-soft);
+  aspect-ratio: 16 / 6;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     border-radius: 8px 8px 0 0;
     transition: transform 0.3s;
