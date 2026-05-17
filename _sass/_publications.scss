@@ -71,6 +71,15 @@
         font-weight: bolder;
       }
 
+      .contribution {
+        margin-top: 0.4rem;
+        padding-left: 0.65rem;
+        border-left: 2px solid var(--global-divider-color);
+        color: var(--global-text-color-light);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);

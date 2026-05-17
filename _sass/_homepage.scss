@@ -365,6 +365,15 @@ body.fixed-top-nav {
   font-weight: 600;
 }
 
+.publications ol.bibliography li .contribution {
+  margin-top: 0.4rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid var(--jw-line);
+  color: #7a7f87;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .publications ol.bibliography li .links {
   margin-top: 10px;
   display: flex;

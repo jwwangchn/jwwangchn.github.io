@@ -167,6 +167,11 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+    {% if entry.contribution %}
+      <div class="contribution">
+        {{ entry.contribution | strip }}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
