@@ -31,6 +31,7 @@ Note: this personal site is a trimmed/customized fork, so not every upstream al-
   `PATH=/opt/homebrew/opt/ruby/bin:$PATH bundle exec jekyll serve --host 127.0.0.1 --port 4000`
   (site at http://127.0.0.1:4000)
 - **Build verification:** `bundle exec jekyll build`
+- **Scholar citation refresh:** `ruby scripts/update_scholar_citations.rb`
 - **Pre-commit:** `npx prettier . --write` (if prettier available)
 
 ### Local Server Notes
@@ -55,6 +56,7 @@ Note: this personal site is a trimmed/customized fork, so not every upstream al-
 | Site styles | `_sass/site/` | Project-owned Sass partials |
 | Vendor styles | `_sass/vendor/` | Third-party Sass partials |
 | Browser assets | `assets/` | CSS entrypoint, JS, fonts, favicon, and publication images |
+| Maintenance scripts | `scripts/` | Small local/GitHub Actions helpers |
 | Config | `_config.yml` | Jekyll and site configuration |
 
 Keep content edits in the content paths above whenever possible. Template and style edits should stay in their corresponding layout/include/Sass areas.
@@ -80,3 +82,4 @@ Keep content edits in the content paths above whenever possible. Template and st
 - The site uses Jekyll + al-folio theme
 - Publication images go in `assets/img/publication_preview/`
 - Social links are in `_data/socials.yml`
+- Google Scholar citation count is stored in `_data/socials.yml` and refreshed by `.github/workflows/update-scholar-citations.yml`
