@@ -62,10 +62,10 @@ bib_search: false
 navbar_sections:
   - title: Projects
     url: /#projects
-  - title: Honors
-    url: /#honors
   - title: Publications
     url: /#publications
+  - title: Honors
+    url: /#honors
 
 # Dimensions
 max_width: 1040px
@@ -95,49 +95,6 @@ google_site_verification: # your google-site-verification ID (Google Search Cons
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
-# Blog
-# -----------------------------------------------------------------------------
-
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
-
-# Pagination
-pagination:
-  enabled: true
-
-related_blog_posts:
-  enabled: true
-  max_related: 5
-
-# Giscus comments (RECOMMENDED)
-# Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
-giscus:
-  repo: # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # leave empty or specify your category_id (see https://giscus.app/)
-  mapping: title # identify discussions by post title
-  strict: 1 # use strict identification mode
-  reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
-  input_position: bottom # whether to display input form below (bottom) or above (top) the comments
-  dark_theme: dark # name of the dark color scheme (preferred works well with al-folio dark mode)
-  light_theme: light # name of the light color scheme (preferred works well with al-folio light mode)
-  emit_metadata: 0
-  lang: en
-
-# Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
-# External sources.
-# If you have blog posts published on medium.com or other external sources,
-# you can display them in your blog by adding a link to the RSS feed.
-# Optional: Set default categories and tags for posts from each source.
-external_sources:
-
-# -----------------------------------------------------------------------------
 # Newsletter
 # -----------------------------------------------------------------------------
 
@@ -145,22 +102,6 @@ newsletter:
   enabled: false
   endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
   # https://loops.so/docs/forms/custom-form
-
-# -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
-
-collections:
-  books:
-    output: false
-  news:
-    defaults:
-      layout: post
-    output: true
-  projects:
-    output: false
-  teachings:
-    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -186,17 +127,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - vendor
-  - _pages/about_einstein.md
-  - _pages/blog.md
-  - _pages/books.md
-  - _pages/cv.md
-  - _pages/dropdown.md
-  - _pages/news.md
-  - _pages/profiles.md
-  - _pages/projects.md
-  - _pages/publications.md
-  - _pages/repositories.md
-  - _pages/teaching.md
 keep_files:
   - CNAME
   - .nojekyll
@@ -204,24 +134,17 @@ keep_files:
 # Plug-ins
 plugins:
   - jekyll-3rd-party-libraries
-  - jekyll-archives-v2
   - jekyll-cache-bust
   - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
-  - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-socials
-  - jekyll-tabs
   - jekyll-terser
-  - jekyll-toc
-  - jekyll-twitter-plugin
   - jemoji
 
 # Sitemap settings
@@ -249,23 +172,6 @@ jekyll-minifier:
 terser:
   compress:
     drop_console: true
-
-# -----------------------------------------------------------------------------
-# Jekyll Archives
-# -----------------------------------------------------------------------------
-
-jekyll-archives:
-  posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-    permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -296,14 +202,6 @@ scholar:
   group_by: none
   group_order: descending
 
-# Display different badges withs stats for your publications
-# Customize badge behavior in _layouts/bib.liquid
-enable_publication_badges:
-  altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
-  dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
-  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
-  inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
-
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
   [
@@ -318,12 +216,9 @@ filtered_bibtex_keywords:
     bibtex_show,
     blog,
     code,
-    dimensions,
     eprint,
-    google_scholar_id,
     hal,
     html,
-    inspirehep_id,
     pdf,
     pmid,
     poster,
@@ -403,8 +298,6 @@ enable_navbar_social: false # enables displaying social links in the navbar on t
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
-enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
-
 # -----------------------------------------------------------------------------
 # Library versions
 # -----------------------------------------------------------------------------
@@ -641,25 +534,3 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-
-# -----------------------------------------------------------------------------
-# Get external JSON data
-# -----------------------------------------------------------------------------
-
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
-
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references

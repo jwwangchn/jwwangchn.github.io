@@ -1,0 +1,468 @@
+/*******************************************************************************
+ * Personal homepage styles - inspired by yizenghan.github.io
+ ******************************************************************************/
+
+/* Prevent FOUC: page starts hidden, fades in when CSS is loaded */
+body.page-ready-fade {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.page-ready-fade.loaded {
+  opacity: 1;
+}
+
+/* Also ensure navbar text is always visible even during load */
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: var(--jw-ink) !important;
+  font-weight: 600 !important;
+}
+
+:root {
+  --jw-primary: #222;
+  --jw-primary-light: #555;
+  --jw-ink: #222;
+  --jw-muted: #555;
+  --jw-muted-light: #888;
+  --jw-line: #e5e5e5;
+  --jw-line-light: #f0f0f0;
+  --jw-surface: #ffffff;
+  --jw-bg: #ffffff;
+  --jw-soft: #fafafa;
+}
+
+html[data-theme="dark"] {
+  --jw-primary: #edf3f5;
+  --jw-primary-light: #c8d0d4;
+  --jw-ink: #edf3f5;
+  --jw-muted: #aab7bd;
+  --jw-muted-light: #777;
+  --jw-line: #333;
+  --jw-line-light: #2a2a2a;
+  --jw-surface: #1c1f23;
+  --jw-bg: #0d1117;
+  --jw-soft: #161b22;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body,
+.container[role="main"],
+.post,
+.post article,
+.post article > .clearfix,
+.publications ol.bibliography li {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+body {
+  background: var(--jw-bg);
+  color: var(--jw-ink);
+  line-height: 1.7;
+}
+
+body.fixed-top-nav {
+  padding-top: 64px;
+}
+
+.container[role="main"] {
+  max-width: 960px;
+}
+
+.container[role="main"].mt-5 {
+  margin-top: 1.5rem !important;
+}
+
+/* ===== HERO / HEADER ===== */
+
+.post-header {
+  position: relative;
+  padding: 10px 0 24px;
+  background: var(--jw-bg);
+}
+
+.post-header::before {
+  display: none;
+}
+
+.post-title {
+  max-width: 820px;
+  color: var(--jw-ink);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+}
+
+.post-title .chinese-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--jw-muted-light);
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.post-title .font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.post-header .desc {
+  max-width: 760px;
+  margin-bottom: 0.55rem;
+  color: var(--jw-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.post-header .desc + .desc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  color: transparent;
+}
+
+.post-header .desc + .desc a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 2.1rem;
+  padding: 6px 16px;
+  border: 1px solid var(--jw-line);
+  border-radius: 6px;
+  background: var(--jw-surface);
+  color: var(--jw-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.post-header .desc + .desc a:hover {
+  border-color: var(--jw-primary);
+  color: var(--jw-primary);
+}
+
+/* ===== ARTICLE CONTENT ===== */
+
+.post article > .clearfix {
+  max-width: 850px;
+  margin: 0 0 0;
+  color: var(--jw-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.post article > .clearfix p {
+  margin: 0 0 12px;
+  color: var(--jw-muted);
+}
+
+.post article > .clearfix p:last-child {
+  margin-bottom: 0;
+}
+
+.post article > .clearfix p a {
+  color: var(--jw-primary);
+  font-weight: 600;
+}
+
+.post article > .clearfix p a:hover {
+  color: var(--jw-primary-light);
+}
+
+/* ===== SECTION TITLES ===== */
+
+.post article > h2,
+.publications h2.bibliography {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 24px;
+  color: var(--jw-ink);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* ===== FEATURED PROJECTS ===== */
+
+.featured-projects {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0 0 2rem;
+}
+
+.featured-project {
+  display: block;
+  padding: 0;
+  border: 1px solid var(--jw-line);
+  border-radius: 8px;
+  background: var(--jw-surface);
+  color: var(--jw-muted);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.featured-project-image {
+  width: 100%;
+  overflow: hidden;
+  background: var(--jw-soft);
+  aspect-ratio: 16 / 6;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.3s;
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+}
+
+.featured-project:hover {
+  border-color: var(--jw-primary);
+  color: var(--jw-muted);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.featured-project-title,
+.featured-project-description,
+.featured-project-link {
+  display: block;
+}
+
+.featured-project-title {
+  display: block;
+  padding: 1rem 1.1rem 0;
+  color: var(--jw-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.featured-project-description {
+  display: block;
+  max-width: 760px;
+  padding: 0.25rem 1.1rem 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.featured-project-link {
+  display: block;
+  margin-top: 0.65rem;
+  padding: 0 1.1rem 1rem;
+  color: var(--jw-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ===== HONORS LIST ===== */
+
+.honors-list {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.honors-list li {
+  position: relative;
+  padding: 0 0 5px 22px;
+  color: var(--jw-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.honors-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--jw-primary);
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
+.honors-list li b {
+  color: var(--jw-ink);
+  font-weight: 600;
+}
+
+/* ===== PUBLICATIONS ===== */
+
+.publication-stats {
+  margin: -14px 0 18px;
+  color: var(--jw-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.publication-stats span {
+  margin-left: 10px;
+  color: var(--jw-muted-light);
+}
+
+.publications {
+  margin-top: 0;
+}
+
+.publications h2.bibliography {
+  max-width: none;
+  margin: 28px 0 24px;
+  padding-top: 0;
+  border-top: 0;
+  color: var(--jw-ink);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publications ol.bibliography li {
+  margin-bottom: 0.7rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--jw-line);
+  border-radius: 8px;
+  background: var(--jw-surface);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.publications ol.bibliography li .row {
+  align-items: flex-start;
+}
+
+.publications ol.bibliography li .title {
+  color: var(--jw-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.publications ol.bibliography li .author,
+.publications ol.bibliography li .periodical {
+  color: var(--jw-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.publications ol.bibliography li .author > em {
+  border-bottom: 2px solid var(--jw-primary);
+  color: var(--jw-ink);
+  font-weight: 600;
+}
+
+.publications ol.bibliography li .periodical em {
+  color: var(--jw-ink);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.publications ol.bibliography li .contribution {
+  margin-top: 0.4rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid var(--jw-line);
+  color: #7a7f87;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.publications ol.bibliography li .links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.publications ol.bibliography li .links a.btn {
+  border-color: var(--jw-primary);
+  border-radius: 999px;
+  color: var(--jw-primary);
+  font-weight: 800;
+}
+
+.publications ol.bibliography li .links a.btn:hover {
+  background: var(--jw-primary);
+  color: var(--global-hover-text-color);
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+  backdrop-filter: none;
+  background: var(--jw-bg);
+  border-bottom: 1px solid var(--jw-line);
+  box-shadow: none;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  font-weight: 600 !important;
+  font-size: 0.88rem;
+  color: var(--jw-ink) !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: var(--jw-primary) !important;
+  background: rgba(128, 128, 128, 0.12);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: var(--jw-ink) !important;
+  font-weight: 600 !important;
+}
+
+/* ===== FOOTER ===== */
+
+footer:not(.fixed-bottom) {
+  background: var(--jw-soft);
+  border-top: 1px solid var(--jw-line);
+  padding: 12px 30px 8px;
+  text-align: center;
+}
+
+footer.sticky-bottom {
+  margin-top: 1.5rem !important;
+}
+
+footer.fixed-bottom {
+  padding: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .post-header {
+    padding-top: 40px;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+
+  .post article > h2,
+  .publications h2.bibliography {
+    font-size: 1.2rem;
+  }
+}

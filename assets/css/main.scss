@@ -3,38 +3,25 @@
 ---
 @charset "utf-8";
 
-/* Built-in Sass modules you’ll likely use across partials */
 @use "sass:math";
 @use "sass:string";
 
-/* Configure your design tokens BEFORE loading any of your partials.
-   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
-@use "variables" with (
+@use "site/variables" with (
   $max-content-width: {{ site.max_width | default:  "930px" }}
 );
 
-/* Your project partials — convert these files to `@use "variables";`
-   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
-@use "themes";
-@use "layout";
+@use "site/themes";
+@use "site/layout";
 
-// Core styles organized by usage
-@use "typography";
-@use "navbar";
-@use "footer";
-@use "blog";
-@use "publications";
-@use "homepage";
-@use "components";
-@use "utilities";
+@use "site/typography";
+@use "site/navbar";
+@use "site/footer";
+@use "site/publications";
+@use "site/homepage";
+@use "site/components";
+@use "site/utilities";
 
-// Other specialized styles
-@use "distill";
-@use "cv";
-@use "tabs";
-@use "teachings";
-@use "typograms";
-@use "font-awesome/fontawesome";
-@use "font-awesome/brands";
-@use "font-awesome/solid";
-@use "font-awesome/regular";
+@use "vendor/font-awesome/fontawesome";
+@use "vendor/font-awesome/brands";
+@use "vendor/font-awesome/solid";
+@use "vendor/font-awesome/regular";
