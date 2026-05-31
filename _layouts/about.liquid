@@ -18,7 +18,9 @@ layout: default
       &nbsp;/&nbsp;
       <a href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
       &nbsp;/&nbsp;
-      <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">
+        Google Scholar{% if site.data.socials.scholar_citations %} ({{ site.data.socials.scholar_citations }} citations){% endif %}
+      </a>
     </p>
   </header>
 

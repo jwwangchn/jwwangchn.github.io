@@ -29,6 +29,6 @@ honors:
 
 Researcher at Alibaba DAMO Academy, Ph.D. from Wuhan University, advised by Prof. Wen Yang and Prof. Gui-Song Xia.
 
-My research focuses on Generative AI, Medical AI, Computer Vision, Deep Learning, in particular vision generation models and vision-larguage models.
+My research focuses on Generative AI, Medical AI, Computer Vision, Deep Learning, in particular vision generation models and vision-language models.
 
 Previously, I worked at Huawei on computer graphics and video generation models, and interned at SenseTime on object detection.

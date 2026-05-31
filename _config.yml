@@ -62,10 +62,10 @@ bib_search: false
 navbar_sections:
   - title: Projects
     url: /#projects
-  - title: Honors
-    url: /#honors
   - title: Publications
     url: /#publications
+  - title: Honors
+    url: /#honors
 
 # Dimensions
 max_width: 1040px
