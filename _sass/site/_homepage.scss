@@ -306,6 +306,18 @@ body.fixed-top-nav {
 
 /* ===== PUBLICATIONS ===== */
 
+.publication-stats {
+  margin: -14px 0 18px;
+  color: var(--jw-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.publication-stats span {
+  margin-left: 10px;
+  color: var(--jw-muted-light);
+}
+
 .publications {
   margin-top: 0;
 }

@@ -18,9 +18,7 @@ layout: default
       &nbsp;/&nbsp;
       <a href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
       &nbsp;/&nbsp;
-      <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">
-        Google Scholar{% if site.data.socials.scholar_citations %} ({{ site.data.socials.scholar_citations }} citations){% endif %}
-      </a>
+      <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
     </p>
   </header>
 
@@ -65,6 +63,14 @@ layout: default
 
     {% if page.publications %}
       <h2 id="publications">Selected Publications</h2>
+      {% if site.data.socials.scholar_citations %}
+        <p class="publication-stats">
+          Google Scholar citations: {{ site.data.socials.scholar_citations }}
+          {% if site.data.socials.scholar_citations_updated %}
+            <span>Updated {{ site.data.socials.scholar_citations_updated }}</span>
+          {% endif %}
+        </p>
+      {% endif %}
       {% include publications/bib_search.liquid %}
       <div class="publications">
         {% bibliography %}
