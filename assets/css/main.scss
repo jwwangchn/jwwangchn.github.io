@@ -18,22 +18,14 @@
 @use "themes";
 @use "layout";
 
-// Core styles organized by usage
 @use "typography";
 @use "navbar";
 @use "footer";
-@use "blog";
 @use "publications";
 @use "homepage";
 @use "components";
 @use "utilities";
 
-// Other specialized styles
-@use "distill";
-@use "cv";
-@use "tabs";
-@use "teachings";
-@use "typograms";
 @use "font-awesome/fontawesome";
 @use "font-awesome/brands";
 @use "font-awesome/solid";

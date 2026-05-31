@@ -94,23 +94,6 @@ openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX
 google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
-# -----------------------------------------------------------------------------
-# Blog
-# -----------------------------------------------------------------------------
-
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
-
-# Pagination
-pagination:
-  enabled: true
-
-related_blog_posts:
-  enabled: true
-  max_related: 5
-
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
@@ -147,22 +130,6 @@ newsletter:
   # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
-
-collections:
-  books:
-    output: false
-  news:
-    defaults:
-      layout: post
-    output: true
-  projects:
-    output: false
-  teachings:
-    output: false
-
-# -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
@@ -186,17 +153,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - vendor
-  - _pages/about_einstein.md
-  - _pages/blog.md
-  - _pages/books.md
-  - _pages/cv.md
-  - _pages/dropdown.md
-  - _pages/news.md
-  - _pages/profiles.md
-  - _pages/projects.md
-  - _pages/publications.md
-  - _pages/repositories.md
-  - _pages/teaching.md
 keep_files:
   - CNAME
   - .nojekyll
@@ -204,24 +160,17 @@ keep_files:
 # Plug-ins
 plugins:
   - jekyll-3rd-party-libraries
-  - jekyll-archives-v2
   - jekyll-cache-bust
   - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
-  - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-socials
-  - jekyll-tabs
   - jekyll-terser
-  - jekyll-toc
-  - jekyll-twitter-plugin
   - jemoji
 
 # Sitemap settings
@@ -249,23 +198,6 @@ jekyll-minifier:
 terser:
   compress:
     drop_console: true
-
-# -----------------------------------------------------------------------------
-# Jekyll Archives
-# -----------------------------------------------------------------------------
-
-jekyll-archives:
-  posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-    permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -641,25 +573,3 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-
-# -----------------------------------------------------------------------------
-# Get external JSON data
-# -----------------------------------------------------------------------------
-
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
-
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references
