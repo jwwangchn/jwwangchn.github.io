@@ -19,7 +19,7 @@ honors:
   - National First Prize (TOP5) & Best Paper Award, Graduate Electronic Design Competition — 2018
   - 6th Place & Finalist, ICRA & DJI RoboMaster AI/Robotics Challenge — 2017, 2018
   - National Second Prize, Graduate Electronic Design Competition — 2017
-  - Chun-Cheng Scholar (Top 1%) — 2016
+  - Chun-Tsung Scholar (Top 1%) — 2016
   - Provincial Grand Prize, National Undergraduate Electronics Design Contest — 2015
   - National Third Prize, Challenge Cup — 2015
   - National Second Prize, National Mathematical Modeling Competition — 2014
