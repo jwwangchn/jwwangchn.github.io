@@ -36,7 +36,7 @@ layout: default
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include shared/figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
         {% endif %}
@@ -63,7 +63,7 @@ layout: default
 
     {% if page.publications %}
       <h2 id="publications">Selected Publications</h2>
-      {% include bib_search.liquid %}
+      {% include publications/bib_search.liquid %}
       <div class="publications">
         {% bibliography %}
       </div>

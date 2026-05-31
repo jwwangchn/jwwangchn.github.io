@@ -12,14 +12,14 @@
       {% endif %}
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
-    {% include head.liquid %}
+    {% include site/head.liquid %}
   </head>
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} page-ready-fade">
     <script>document.body.classList.add('loaded');</script>
     <!-- Header -->
-    {% include header.liquid %}
+    {% include site/header.liquid %}
 
     <!-- Content -->
     <div class="container mt-5" role="main">
@@ -49,9 +49,9 @@
     </div>
 
     <!-- Footer -->
-    {% include footer.liquid %}
+    {% include site/footer.liquid %}
 
     <!-- JavaScripts -->
-    {% include scripts.liquid %}
+    {% include site/scripts.liquid %}
   </body>
 </html>
