@@ -85,15 +85,6 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    {% if page.honors %}
-      <h2 id="honors">Honors & Awards</h2>
-      <ul class="honors-list">
-        {% for honor in page.honors %}
-        <li>{{ honor }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-
     {% if page.publications %}
       <h2 id="publications">Selected Publications</h2>
       {% include bib_search.liquid %}
@@ -109,6 +100,15 @@ layout: default
 
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
+    {% endif %}
+
+    {% if page.honors %}
+      <h2 id="honors">Honors & Awards</h2>
+      <ul class="honors-list">
+        {% for honor in page.honors %}
+        <li>{{ honor }}</li>
+        {% endfor %}
+      </ul>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
