@@ -60,12 +60,12 @@ socials_in_search: true
 posts_in_search: true
 bib_search: false
 navbar_sections:
-  - title: Projects
-    url: /#projects
   - title: Publications
     url: /#publications
   - title: Honors
     url: /#honors
+  - title: Projects
+    url: /#projects
 
 # Dimensions
 max_width: 1040px

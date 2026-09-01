@@ -48,19 +48,6 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    {% if page.featured_projects %}
-      <h2 id="projects">Projects</h2>
-      <div class="featured-projects">
-        {% for project in page.featured_projects %}
-          <a class="featured-project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
-            <span class="featured-project-title">{{ project.title }}</span>
-            <span class="featured-project-description">{{ project.description }}</span>
-            <span class="featured-project-link">Open project</span>
-          </a>
-        {% endfor %}
-      </div>
-    {% endif %}
-
     {% if page.publications %}
       <h2 id="publications">Selected Publications</h2>
       {% if site.data.socials.scholar_citations %}
@@ -93,6 +80,19 @@ layout: default
         <li>{{ honor }}</li>
         {% endfor %}
       </ul>
+    {% endif %}
+
+    {% if page.featured_projects %}
+      <h2 id="projects">Projects</h2>
+      <div class="featured-projects">
+        {% for project in page.featured_projects %}
+          <a class="featured-project" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+            <span class="featured-project-title">{{ project.title }}</span>
+            <span class="featured-project-description">{{ project.description }}</span>
+            <span class="featured-project-link">Open project</span>
+          </a>
+        {% endfor %}
+      </div>
     {% endif %}
 
   </article>
