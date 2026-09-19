@@ -61,7 +61,7 @@ html = fetch_scholar_profile(user_id)
 citations = extract_citation_count(html)
 updated = Date.today.strftime("%B %-d, %Y")
 
-content = upsert_yaml_value(content, "scholar_citations", citations, "total Google Scholar citations, update manually when needed")
+content = upsert_yaml_value(content, "scholar_citations", citations, "total Google Scholar citations, refreshed by GitHub Actions")
 content = upsert_yaml_value(content, "scholar_citations_updated", updated)
 
 File.write(SOCIALS_PATH, content)

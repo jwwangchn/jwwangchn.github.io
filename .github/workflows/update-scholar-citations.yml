@@ -2,7 +2,8 @@ name: Update Google Scholar citations
 
 on:
   schedule:
-    - cron: "17 2 * * *"
+    # Retry across separate runners when Scholar temporarily blocks an IP.
+    - cron: "17 2,8,14,20 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,6 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,7 +29,17 @@ jobs:
           ruby-version: "3.3.5"
 
       - name: Fetch latest Google Scholar citation count
-        run: ruby scripts/update_scholar_citations.rb
+        run: |
+          for attempt in 1 2 3; do
+            if ruby scripts/update_scholar_citations.rb; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep 60
+            fi
+          done
+          echo "::error::Google Scholar refresh failed; keeping the last successful count and date."
+          exit 1
 
       - name: Commit and push if changed
         run: |
