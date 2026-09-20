@@ -444,6 +444,36 @@ nav[data-toggle="toc"] {
   z-index: 1050; // Keep zoomed images and their overlay above the fixed navbar (1030).
 }
 
+.medium-zoom-image--opened {
+  // Medium Zoom scales these values together with the thumbnail.
+  border-radius: 2px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-close {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 1051;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(18, 22, 28, 0.75);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: #12161c;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
 #toc-sidebar {
   z-index: 1;
 }
