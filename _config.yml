@@ -64,8 +64,9 @@ navbar_sections:
     url: /#publications
   - title: Honors
     url: /#honors
-  - title: Projects
-    url: /#projects
+  # Projects nav entry hidden together with the section (2026-10-11); uncomment to restore
+  # - title: Projects
+  #   url: /#projects
 
 # Dimensions
 max_width: 1040px

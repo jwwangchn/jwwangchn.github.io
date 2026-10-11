@@ -6,6 +6,7 @@ subtitle:
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 publications: true
+projects: false # Projects section hidden (2026-10-11); featured_projects data below is kept — set to true to show it again
 
 featured_projects:
   - title: Arxiv Daily Paper

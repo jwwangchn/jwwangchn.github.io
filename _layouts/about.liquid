@@ -82,7 +82,7 @@ layout: default
       </ul>
     {% endif %}
 
-    {% if page.featured_projects %}
+    {% if page.projects and page.featured_projects %}
       <h2 id="projects">Projects</h2>
       <div class="featured-projects">
         {% for project in page.featured_projects %}
